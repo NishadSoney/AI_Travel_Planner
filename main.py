@@ -1,6 +1,7 @@
 import os
 import sys
 from datetime import date
+import warnings
 
 from crewai import Crew, Process
 
@@ -13,6 +14,7 @@ CYAN, GREEN, YELLOW, RED, BOLD, RESET = (
 LINE = "=" * 64
 REPORT_FILE = "travel_report.md"
 
+warnings.filterwarnings("ignore", category=UserWarning, module="crewai")  # suppress CrewAI warnings
 
 def banner():
     print(f"\n{CYAN}{LINE}")
