@@ -1,0 +1,175 @@
+/* ==========================================================================
+   AI TRAVEL PLANNER - FULL-WIDTH SPACIOUS MODERN THEME
+   ========================================================================== */
+
+/* Expand main container to use full available screen width */
+main,
+.cl-thread-container,
+.cl-message-container,
+.chat-container,
+div[data-testid="chat-message-list"],
+div[class*="message-container"] {
+    max-width: 95vw !important;
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Remove horizontal restrictions on messages */
+.cl-message,
+div[data-testid="message"],
+div[class*="message_"] {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Spacious Step Containers */
+.cl-step {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 12px !important;
+    margin: 12px 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(30, 41, 59, 0.5) !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Agent Card Containers */
+.agent-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.85));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 18px 0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.agent-card:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* Agent Badges */
+.agent-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.badge-destination {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.badge-itinerary {
+    background: rgba(14, 165, 233, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-budget {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.badge-safety {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+/* Hero Section */
+.hero-container {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Beautiful responsive tables */
+table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin: 16px 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+th {
+    background: rgba(30, 41, 59, 0.9) !important;
+    color: #f1f5f9 !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+td {
+    padding: 12px 16px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background: rgba(15, 23, 42, 0.4) !important;
+}
+
+tr:last-child td {
+    border-bottom: none !important;
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Thinking Box Monospace Styling */
+.agent-thought-content {
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    background: rgba(15, 23, 42, 0.6);
+    border-left: 3px solid #38bdf8;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 8px 0;
+    color: #cbd5e1;
+}
+
+/* Checklists */
+ul:has(input[type="checkbox"]) {
+    list-style: none !important;
+    padding-left: 0 !important;
+}

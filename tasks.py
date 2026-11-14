@@ -80,3 +80,32 @@ safety_task = Task(
 # Order matters: the crew runs these one after another (Process.sequential).
 all_tasks = [destination_task, itinerary_task, budget_task, safety_task]
 all_agents = [destination_advisor, itinerary_planner, budget_planner, safety_guide]
+
+
+def get_fresh_tasks_and_agents():
+    """Returns fresh Task instances for multi-run environments like web UIs."""
+    t1 = Task(
+        description=destination_task.description,
+        expected_output=destination_task.expected_output,
+        agent=destination_advisor,
+    )
+    t2 = Task(
+        description=itinerary_task.description,
+        expected_output=itinerary_task.expected_output,
+        agent=itinerary_planner,
+        context=[t1],
+    )
+    t3 = Task(
+        description=budget_task.description,
+        expected_output=budget_task.expected_output,
+        agent=budget_planner,
+        context=[t1, t2],
+    )
+    t4 = Task(
+        description=safety_task.description,
+        expected_output=safety_task.expected_output,
+        agent=safety_guide,
+        context=[t1, t2],
+    )
+    return [t1, t2, t3, t4], [destination_advisor, itinerary_planner, budget_planner, safety_guide]
+

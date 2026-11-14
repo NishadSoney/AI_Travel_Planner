@@ -38,6 +38,16 @@ GEMINI_MODEL=gemini/gemini-3.5-flash-lite
 ```
 
 ### 4. Run the Planner
+
+#### Option A: Interactive Web UI (Chainlit)
+Launch the modern, full-width UI with live agent tracking and thought visualization:
+```bash
+chainlit run app.py -w
+```
+Open your browser at `http://localhost:8000`.
+
+#### Option B: Terminal CLI
+Run directly in your command line:
 ```bash
 python main.py
 ```
